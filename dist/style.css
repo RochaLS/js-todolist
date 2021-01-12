@@ -39,6 +39,7 @@ body {
 
 .listTitle {
   color: white;
+  margin-right: 20px;
 }
 
 .item {
@@ -72,4 +73,79 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #333333;
+}
+
+.listHeader {
+  position: relative;
+}
+
+.addItemButton {
+  width: 50px;
+  color: white;
+  border: 3px solid white;
+  background-color: #e54332;
+  border-radius: 50px;
+  font-size: 36px;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+}
+
+/* Form Style */
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 50%;
+  min-height: 60%;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form input {
+  height: 40px;
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin: 10px;
+  font-size: 18px;
+}
+
+.form textarea {
+  height: 60px;
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin: 10px;
+  font-size: 18px;
+}
+
+.form input[type="submit"] {
+  margin-top: 10px;
+  width: 50%;
+  height: 40px;
+  color: white;
+  background-color: #e54332;
+  border: none;
+  font-weight: bold;
+}
+
+.form label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.form button {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: white;
+  border: none;
 }

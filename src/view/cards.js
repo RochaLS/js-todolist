@@ -26,7 +26,6 @@ function createCard() {
 function createElementWithClassName(element, className) {
     const e = document.createElement(element);
     e.className = className;
-    console.log(e)
     return e;
 }
 

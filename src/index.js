@@ -1,4 +1,5 @@
 import { loadCards } from "./view/cards.js";
-console.log('Hi!');
+import { doButtonSetup } from "./view/list-page.js";
 
+doButtonSetup();
 loadCards();
