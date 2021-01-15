@@ -1,22 +1,24 @@
-function createCard() {
+const list = document.querySelector('.list');
+
+function createCard(title, dueDate) {
     const card = createElementWithClassName('div', 'item');
     const topArea = createElementWithClassName('div', 'topArea');
     const button = document.createElement('button');
     button.textContent = 'X'
     const date = createElementWithClassName('p', 'date');
-    date.textContent = '5 Jan';
+    date.textContent = dueDate;
     const priority = document.createElement('p');
     priority.textContent = '!!!';
     const mainContent = createElementWithClassName('div', 'mainContent');
-    const description = document.createElement('p');
-    description.textContent = 'Clean living room';
+    const titleText = document.createElement('p');
+    titleText.textContent = title;
 
     card.appendChild(topArea);
     card.appendChild(mainContent);
     topArea.appendChild(button);
     topArea.appendChild(date);
     topArea.appendChild(priority);
-    mainContent.appendChild(description);
+    mainContent.appendChild(titleText);
 
     return card;
 
@@ -29,13 +31,17 @@ function createElementWithClassName(element, className) {
     return e;
 }
 
-function loadCards() {
-    const list = document.querySelector('.list');
-
-    for (let i = 0; i < 3; i++) {
-        list.appendChild(createCard());
-    }
+// Load all cards at the initial load of the application...
+function loadCards(items) {
+    items.forEach(item => {
+        list.appendChild(createCard(item.title, item.dueDate));
+    });
 }
 
-export { loadCards };
+// Append new created card to the body of the page.
+function loadNewCard(item) {
+     list.appendChild(createCard(item.title, item.dueDate));
+}
+
+export { loadCards, loadNewCard };
 

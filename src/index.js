@@ -1,5 +1,5 @@
 import { loadCards } from "./view/cards.js";
-import { doButtonSetup } from "./view/list-page.js";
+import { doUISetup } from "./view/list-page.js";
 
-doButtonSetup();
-loadCards();
+doUISetup();
+loadCards([]);
