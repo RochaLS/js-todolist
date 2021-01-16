@@ -4,9 +4,16 @@ import { loadCards, loadNewCard } from "../view/cards.js";
 let items = [];
 
 function createNewTask(data) {
-    const newItem = new Item(data.title, data.description, data.date, data.category);
+    const newItem = new Item(data.title, data.description, data.date, data.category, 'none');
     items.push(newItem);
+    newItem.index = items.indexOf(newItem); //Assigning a  index to manage each task
+    console.log(newItem);
+    console.log(items);
     loadNewCard(newItem); // Updating UI with new data
 }
 
-export { createNewTask };
+function removeTaskFromStorage(index) {
+    items.splice(index, 1);
+}
+
+export { createNewTask, removeTaskFromStorage };
