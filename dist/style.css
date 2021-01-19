@@ -91,13 +91,18 @@ body {
   top: 5px;
 }
 
-/* Form Style */
+/* Center Containers */
 
-.form {
+.center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* Form Style */
+
+.form {
   background-color: white;
   width: 50%;
   min-height: 60%;
@@ -149,4 +154,61 @@ body {
   font-weight: bold;
   background-color: white;
   border: none;
+}
+
+/* Item Details Box */
+
+.item-details {
+  background-color: white;
+  width: 50%;
+  min-height: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: none;
+  border-radius: 10px;
+}
+
+.details-description {
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.details-date {
+  font-size: 22px;
+  margin-top: 20px;
+  color: #e54332;
+  font-weight: 500;
+}
+
+.details-content {
+  margin: 5%;
+}
+
+.details-top-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-btn {
+  background-color: #e54332;
+  color: white;
+  width: 25%;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  float: right;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.details-dismiss-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 26px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.priority {
+  font-size: 24px;
 }

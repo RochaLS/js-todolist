@@ -16,4 +16,9 @@ function removeTaskFromStorage(index) {
     items.splice(index, 1);
 }
 
-export { createNewTask, removeTaskFromStorage };
+function getItem(index) {
+    console.log(`index: ${index}`)
+    return items[index];
+}
+
+export { createNewTask, removeTaskFromStorage , getItem };

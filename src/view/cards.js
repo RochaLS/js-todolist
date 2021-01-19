@@ -1,4 +1,6 @@
 import { removeTaskFromStorage } from "../controller/controller.js";
+import { getItem } from '../controller/controller.js'
+import { showItemDetails } from './list-page.js'
 
 const list = document.querySelector('.list');
 
@@ -27,6 +29,10 @@ function createCard(title, dueDate, index) {
     topArea.appendChild(date);
     topArea.appendChild(priority);
     mainContent.appendChild(titleText);
+
+    card.addEventListener('click', (e) => {
+        showItemDetails(getItem(e.target.dataset.index)); // Passing card index
+    });
 
     return card;
 
