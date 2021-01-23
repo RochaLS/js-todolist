@@ -31,7 +31,8 @@ function createCard(title, dueDate, index) {
     mainContent.appendChild(titleText);
 
     card.addEventListener('click', (e) => {
-        showItemDetails(getItem(e.target.dataset.index)); // Passing card index
+        console.log(e.currentTarget)
+        showItemDetails(getItem(e.currentTarget.dataset.index)); // Passing card index
     });
 
     return card;

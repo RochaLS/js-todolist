@@ -17,7 +17,6 @@ function removeTaskFromStorage(index) {
 }
 
 function getItem(index) {
-    console.log(`index: ${index}`)
     return items[index];
 }
 

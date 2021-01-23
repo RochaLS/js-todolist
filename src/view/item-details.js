@@ -1,3 +1,5 @@
+import { toggleDetailsBox } from "./list-page.js";
+
 function generateDetailsBox(title, description, priority, date) {
     const detailsHTML = `<div class="item-details center">
         <div class="details-content">
@@ -7,10 +9,12 @@ function generateDetailsBox(title, description, priority, date) {
                 <h3 class="priority">${priority}</h3>
             </div>
             <p class="details-description">${description}</p>
-            <p class="details-date">Due Date:  ${date}</p>
+            <p class="details-date">Due Date: ${date}</p>
             <button class="edit-btn">Edit</button>
         </div>
     </div>`
+
+    
 
     return detailsHTML
 }

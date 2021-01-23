@@ -53,19 +53,25 @@ function getFormData() {
 }
 
 function showItemDetails(item) {
+    console.log(`item: ${item.title}`)
     const box = generateDetailsBox(item.title, item.description, '!!!', item.dueDate);
+    console.log(box)
     document.body.insertAdjacentHTML('beforeend', box);
 
     const dismissButton = document.querySelector('.details-dismiss-btn');
-    // dismissButton.addEventListener('click', () => {
-    //     toggleDetailsBox();
-    // }); 
+    dismissButton.addEventListener('click', manageBoxAndListeners)
     toggleDetailsBox();
+}
+
+function manageBoxAndListeners() {
+    const dismissButton = document.querySelector('.details-dismiss-btn');
+    toggleDetailsBox();
+    dismissButton.removeEventListener('click', manageBoxAndListeners); // Making sure we only have one listener per card and not duplicated.
 }
 
 function toggleDetailsBox() {
     const box = document.querySelector('.item-details');
-    box.style.display = box.style.display == 'none' ? 'block' : 'none'; 
+    box.style.display = box.style.display == 'block' ? 'none' : 'block'; 
     
 }
 

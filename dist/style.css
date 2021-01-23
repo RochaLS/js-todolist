@@ -171,6 +171,7 @@ body {
   font-size: 20px;
   margin-top: 20px;
   text-align: justify;
+  word-break: break-all;
 }
 
 .details-date {
